@@ -16,7 +16,6 @@ export interface ShowcaseExplorerProps extends WindowAppProps {}
 
 const ShowcaseExplorer: React.FC<ShowcaseExplorerProps> = (props) => {
     const { initWidth, initHeight } = useInitialWindowSize({ margin: 100 });
-
     return (
         <Window
             top={24}

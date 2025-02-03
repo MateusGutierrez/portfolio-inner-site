@@ -88,7 +88,7 @@ const Toolbar: React.FC<ToolbarProps> = ({
     };
 
     return (
-        <div style={styles.toolbarOuter}>
+        <div style={styles.toolbarOuter} >
             {startWindowOpen && (
                 <div
                     onMouseDown={onStartWindowClicked}
@@ -118,8 +118,8 @@ const Toolbar: React.FC<ToolbarProps> = ({
                     </div>
                 </div>
             )}
-            <div style={styles.toolbarInner}>
-                <div style={styles.toolbar}>
+            <div className='window' style={{...styles.toolbarInner, borderTopRightRadius: 0, borderTopLeftRadius: 0}}>
+                <div className='title-bar'  style={styles.toolbar}>
                     <div
                         style={Object.assign(
                             {},
@@ -196,8 +196,6 @@ const styles: StyleSheetCSS = {
         bottom: 0,
         width: '100%',
         height: 32,
-        background: Colors.lightGray,
-        borderTop: `1px solid ${Colors.lightGray}`,
         zIndex: 100000,
     },
     verticalStartContainer: {
@@ -348,6 +346,8 @@ const styles: StyleSheetCSS = {
     toolbar: {
         flexGrow: 1,
         width: '100%',
+        borderTopLeftRadius: 0,
+        borderTopRightRadius: 0,
     },
     time: {
         flexShrink: 1,

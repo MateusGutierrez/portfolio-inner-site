@@ -2,15 +2,18 @@ import React, { useCallback, useEffect, useState } from 'react';
 import Colors from '../../constants/colors';
 import ShowcaseExplorer from '../applications/ShowcaseExplorer';
 import Doom from '../applications/Doom';
-import OregonTrail from '../applications/OregonTrail';
 import ShutdownSequence from './ShutdownSequence';
 // import ThisComputer from '../applications/ThisComputer';
-import Henordle from '../applications/Henordle';
+// import Henordle from '../applications/Henordle';
 import Toolbar from './Toolbar';
 import DesktopShortcut, { DesktopShortcutProps } from './DesktopShortcut';
-import Scrabble from '../applications/Scrabble';
 import { IconName } from '../../assets/icons';
 import Credits from '../applications/Credits';
+import Gta from '../applications/Gta';
+import Digger from '../applications/Digger';
+import ThisComputer from '../applications/ThisComputer';
+import wallpaper from '../../assets/pictures/wallpaper';
+import { url } from 'inspector';
 
 export interface DesktopProps {}
 
@@ -24,23 +27,17 @@ const APPLICATIONS: {
         component: React.FC<ExtendedWindowAppProps<any>>;
     };
 } = {
-    // computer: {
-    //     key: 'computer',
-    //     name: 'This Computer',
-    //     shortcutIcon: 'computerBig',
-    //     component: ThisComputer,
-    // },
+    computer: {
+        key: 'computer',
+        name: 'This Computer',
+        shortcutIcon: 'internetIcon',
+        component: ThisComputer,
+    },
     showcase: {
         key: 'showcase',
         name: 'My Showcase',
         shortcutIcon: 'showcaseIcon',
         component: ShowcaseExplorer,
-    },
-    trail: {
-        key: 'trail',
-        name: 'The Oregon Trail',
-        shortcutIcon: 'trailIcon',
-        component: OregonTrail,
     },
     doom: {
         key: 'doom',
@@ -48,17 +45,17 @@ const APPLICATIONS: {
         shortcutIcon: 'doomIcon',
         component: Doom,
     },
-    scrabble: {
-        key: 'scrabble',
-        name: 'Scrabble',
-        shortcutIcon: 'scrabbleIcon',
-        component: Scrabble,
+    gta: {
+        key: 'gta',
+        name: 'Grand Theft Auto',
+        shortcutIcon: 'gtaIcon',
+        component: Gta,
     },
-    henordle: {
-        key: 'henordle',
-        name: 'Henordle',
-        shortcutIcon: 'henordleIcon',
-        component: Henordle,
+    digger: {
+        key: 'digger',
+        name: 'Digger',
+        shortcutIcon: 'diggerIcon',
+        component: Digger
     },
     credits: {
         key: 'credits',
@@ -69,6 +66,7 @@ const APPLICATIONS: {
 };
 
 const Desktop: React.FC<DesktopProps> = (props) => {
+    const [count, setCount] = React.useState(0);
     const [windows, setWindows] = useState<DesktopWindows>({});
 
     const [shortcuts, setShortcuts] = useState<DesktopShortcutProps[]>([]);
@@ -258,9 +256,15 @@ const Desktop: React.FC<DesktopProps> = (props) => {
 
 const styles: StyleSheetCSS = {
     desktop: {
-        minHeight: '100%',
-        flex: 1,
-        backgroundColor: Colors.turquoise,
+        minHeight: '100vh',
+        width: '100vw',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundImage: `url(${wallpaper.background})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
     },
     shutdown: {
         minHeight: '100%',

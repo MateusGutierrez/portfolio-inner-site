@@ -1,5 +1,6 @@
 import './App.css';
 import Desktop from './components/os/Desktop';
+import "xp.css/dist/XP.css";
 
 function App() {
     return (

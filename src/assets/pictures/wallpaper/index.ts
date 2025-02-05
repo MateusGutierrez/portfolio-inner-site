@@ -1,6 +1,6 @@
-import background from './wallpaper.png'
+import background from './wallpaper.png';
 
 const wallpaper = {
-    background : background
-}
-export default wallpaper
+  background: background,
+};
+export default wallpaper;

@@ -9,8 +9,9 @@ import myComputer from './myComputer.png';
 import showcaseIcon from './showcaseIcon.png';
 import doomIcon from './doomIcon.png';
 import gtaIcon from './gtaIcon.png';
-import diggerIcon from './diggerIcon.png'
-import internetIcon from './internetIcon.png'
+import diggerIcon from './diggerIcon.png';
+import internetIcon from './internetIcon.png';
+import startIcon from './start.png';
 import henordleIcon from './henordleIcon.png';
 import credits from './credits.png';
 import volumeOn from './volumeOn.png';
@@ -23,34 +24,35 @@ import scrabbleIcon from './scrabbleIcon.png';
 import close from './close.png';
 
 const icons = {
-    windowResize: windowResize,
-    maximize: maximize,
-    minimize: minimize,
-    computerBig: computerBig,
-    computerSmall: computerSmall,
-    myComputer: myComputer,
-    showcaseIcon: showcaseIcon,
-    doomIcon: doomIcon,
-    gtaIcon: gtaIcon,
-    diggerIcon: diggerIcon,
-    internetIcon: internetIcon,
-    volumeOn: volumeOn,
-    volumeOff: volumeOff,
-    credits: credits,
-    scrabbleIcon: scrabbleIcon,
-    henordleIcon: henordleIcon,
-    close: close,
-    windowGameIcon: windowGameIcon,
-    windowExplorerIcon: windowExplorerIcon,
-    windowsStartIcon: windowsStartIcon,
-    trailIcon: trailIcon,
+  windowResize: windowResize,
+  maximize: maximize,
+  minimize: minimize,
+  computerBig: computerBig,
+  computerSmall: computerSmall,
+  myComputer: myComputer,
+  showcaseIcon: showcaseIcon,
+  doomIcon: doomIcon,
+  gtaIcon: gtaIcon,
+  diggerIcon: diggerIcon,
+  internetIcon: internetIcon,
+  volumeOn: volumeOn,
+  volumeOff: volumeOff,
+  credits: credits,
+  scrabbleIcon: scrabbleIcon,
+  henordleIcon: henordleIcon,
+  close: close,
+  windowGameIcon: windowGameIcon,
+  windowExplorerIcon: windowExplorerIcon,
+  windowsStartIcon: windowsStartIcon,
+  trailIcon: trailIcon,
+  startIcon: startIcon,
 };
 
 export type IconName = keyof typeof icons;
 
 const getIconByName = (
-    iconName: IconName
-    // @ts-ignore
+  iconName: IconName
+  // @ts-ignore
 ): React.FC<React.SVGAttributes<SVGElement>> => icons[iconName];
 
 export default getIconByName;

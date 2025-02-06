@@ -22,6 +22,25 @@ import windowExplorerIcon from './windowExplorerIcon.png';
 import windowsStartIcon from './windowsStartIcon.png';
 import scrabbleIcon from './scrabbleIcon.png';
 import close from './close.png';
+import ieIcon from './ie.png';
+import emailIcon from './email.png';
+import msnIcon from './msn.png';
+import winPlayerIcon from './winPlayer.png';
+import messengerIcon from './messenger.png';
+import calculatorIcon from './calculator.png';
+import notepadIcon from './notepad.png';
+import runIcon from './run.png';
+import documentIcon from './documents.png';
+import picturesIcon from './pictures.png';
+import musicIcon from './musics.png';
+import computerIcon from './computer.png';
+import githubIcon from './github-logo.png';
+import linkedinIcon from './linkedin.png';
+import helpIcon from './help.png';
+import searchIcon from './search.png';
+import turnOffIcon from './turnoff.png';
+import userIcon from './user.png';
+import logOffIcon from './logoff.png';
 
 const icons = {
   windowResize: windowResize,
@@ -46,6 +65,25 @@ const icons = {
   windowsStartIcon: windowsStartIcon,
   trailIcon: trailIcon,
   startIcon: startIcon,
+  ie: ieIcon,
+  email: emailIcon,
+  msn: msnIcon,
+  winPlayer: winPlayerIcon,
+  messanger: messengerIcon,
+  calculator: calculatorIcon,
+  notepad: notepadIcon,
+  run: runIcon,
+  documents: documentIcon,
+  pictures: picturesIcon,
+  music: musicIcon,
+  computer: computerIcon,
+  github: githubIcon,
+  linkedin: linkedinIcon,
+  help: helpIcon,
+  search: searchIcon,
+  turnOff: turnOffIcon,
+  user: userIcon,
+  logOff: logOffIcon,
 };
 
 export type IconName = keyof typeof icons;

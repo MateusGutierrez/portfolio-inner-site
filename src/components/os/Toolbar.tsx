@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Colors from '../../constants/colors';
 import { Icon } from '../general';
+import Menu from './Menu';
 // import { } from '../general';
 // import Home from '../site/Home';
 // import Window from './Window';
@@ -96,27 +97,25 @@ const Toolbar: React.FC<ToolbarProps> = ({
           className="window"
         >
           <div className="title-bar" style={styles.windowTitle}>
-            <div className="window-body">
-              <div style={styles.startWindowInner}>
-                {/* <div style={styles.verticalStartContainer}>
-                      <p style={styles.verticalText}>HeffernanOS</p>
-                    </div> */}
-                <div style={styles.startWindowContent}>
-                  {/* <div style={styles.startMenuSpace} />
-                      <div style={styles.startMenuLine} /> */}
-                  <div
-                    className="start-menu-option"
-                    style={styles.startMenuOption}
-                    onMouseDown={shutdown}
-                  >
-                    <Icon style={styles.startMenuIcon} icon="computerBig" />
-                    <p style={styles.startMenuText}>
-                      Sh<u>u</u>t down...
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <Icon icon="user" style={styles.winUser} />
+            <div className="title-bar-text" style={styles.userLabel}>
+              Windows User
             </div>
+          </div>
+          <div className="window-body" style={styles.windowBody}>
+            <Menu shutdown={shutdown} />
+
+            {/* <div style={styles.startWindowInner}>
+                <div style={styles.verticalStartContainer}>
+                      <p style={styles.verticalText}>HeffernanOS</p>
+                  </div>
+                <div 
+                  style={styles.startWindowContent}
+                  >
+                </div>
+                  <div style={styles.startMenuSpace} />
+                  <div style={styles.startMenuLine} />
+              </div> */}
           </div>
         </div>
       )}
@@ -219,13 +218,14 @@ const styles: StyleSheetCSS = {
     bottom: 40,
     display: 'flex',
     flex: 1,
-    width: 256,
+    width: 400,
     // height: 400,
     left: 0,
     boxSizing: 'border-box',
     border: `1px solid ${Colors.white}`,
     borderBottomColor: Colors.black,
     borderRightColor: Colors.black,
+    flexDirection: 'column',
     // background: Colors.lightGray,
   },
   activeTabOuter: {
@@ -376,7 +376,24 @@ const styles: StyleSheetCSS = {
     cursor: 'pointer',
   },
   windowTitle: {
-    height: 'auto',
+    height: 50,
+    padding: 10,
+    display: 'flex',
+    gap: 10,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
+  winUser: {
+    border: `1px solid ${Colors.white}`,
+    borderRadius: 4,
+  },
+  userLabel: {
+    fontSize: '1.5em',
+    fontWeight: 'bold',
+  },
+  windowBody: {
+    padding: 0,
+    margin: 0,
   },
 };
 

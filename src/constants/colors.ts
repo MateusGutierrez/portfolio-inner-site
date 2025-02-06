@@ -10,6 +10,9 @@ const colors = {
   green: '#15D715',
   darkGreen: '#358335',
   lightBlue: '#0D9BEF', // Fundo claro da barra
+  winLightBlue: '#d3e5fa',
+  winDarkBlue: '#0055ea',
+  winBlue: '#225ad9',
   mediumBlue: '#164DBC', // Fundo mais escuro da barra
   tabLightBlue: '#3980F4',
   tabMediumBlue: '#234B9D',

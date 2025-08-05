@@ -2,8 +2,6 @@ import React, { useCallback, useEffect, useState } from 'react';
 import ShowcaseExplorer from '../applications/ShowcaseExplorer';
 import Doom from '../applications/Doom';
 import ShutdownSequence from './ShutdownSequence';
-// import ThisComputer from '../applications/ThisComputer';
-// import Henordle from '../applications/Henordle';
 import Toolbar from './Toolbar';
 import DesktopShortcut, { DesktopShortcutProps } from './DesktopShortcut';
 import { IconName } from '../../assets/icons';
@@ -27,8 +25,8 @@ const APPLICATIONS: {
 } = {
   computer: {
     key: 'computer',
-    name: 'This Computer',
-    shortcutIcon: 'internetIcon',
+    name: 'Internet',
+    shortcutIcon: 'ie',
     component: ThisComputer,
   },
   showcase: {

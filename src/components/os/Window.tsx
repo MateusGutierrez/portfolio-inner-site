@@ -99,7 +99,7 @@ const Window: React.FC<WindowProps> = (props) => {
   const onDrag = ({ clientX, clientY }: any) => {
     let { x, y } = getXYFromDragProps(clientX, clientY);
     dragRef.current.style.transform = `translate(${x}px, ${y}px)`;
-    dragRef.current.style.opacity = 1;
+    dragRef.current.style.opacity = 0;
   };
 
   const stopDrag = ({ clientX, clientY }: any) => {

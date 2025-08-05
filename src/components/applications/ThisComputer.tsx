@@ -11,7 +11,7 @@ const ThisComputerApp: React.FC<ThisComputerProps> = (props) => {
       left={20}
       width={600}
       height={400}
-      windowBarIcon="computerSmall"
+      windowBarIcon="ie"
       windowTitle="Internet"
       closeWindow={props.onClose}
       onInteract={props.onInteract}
